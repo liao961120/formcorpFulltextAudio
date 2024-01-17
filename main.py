@@ -10,7 +10,7 @@ baseURL = "https://yongfu.name/formcorpFulltextAudio/audio/"
 # Map filename to url
 m = {}
 for fp in audio.glob("*"):
-    url = baseURL + urllib.parse.quote(fp.as_posix())
+    url = baseURL + urllib.parse.quote(fp.name)
     m[fp.name] = url
 
 # Write docs/map.json
